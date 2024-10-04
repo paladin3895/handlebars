@@ -3,12 +3,11 @@ var fs = require('fs');
 var path = require('path');
 var Handlebars = require("handlebars");
 
-console.log("Reading json data from ", process.argv[2]);
+console.log("Reading template from ", process.argv[2]);
+console.log("Reading json data from ", process.argv[3]);
 
-// dataJson is a buffer
-var dataJson = fs.readFileSync(process.argv[2], "utf-8");
-
-var template = fs.readFileSync(path.resolve(path.join(__dirname, 'template', 'index.hbs')), "utf-8");
+var template = fs.readFileSync(process.argv[2], "utf-8");
+var dataJson = fs.readFileSync(process.argv[3], "utf-8");
 
 function buildHtml(template, fileData) {
     var renderTemplate = Handlebars.compile(template);
