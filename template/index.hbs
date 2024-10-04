@@ -1,0 +1,29 @@
+{{!-- template.hbs code... --}}
+
+<html>
+
+<head>
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    {{> header }}
+    <div class="container">
+        {{#each books}}
+        <div class="card">
+            <h2>{{ this.title }}</h2>
+            <p class="author">
+                Written by: {{ this.author }}
+            </p>
+            <div class="body">
+                {{{ this.synopsis }}}
+            </div>
+            <a href="#" class="button">
+                Read More...
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>

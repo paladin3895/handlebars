@@ -1,0 +1,7 @@
+{
+  "title": "Book library",
+  "books": [
+    { "title": "Book 1", "author": "Dat Pham", "synopsys": "lorem ipsum" },
+    { "title": "Book 2", "author": "Tu Le", "synopsys": "lorem ipsum" }
+  ]
+}
